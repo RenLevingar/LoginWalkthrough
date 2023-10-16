@@ -45,3 +45,8 @@ const User = require('../models/user')
             });
         });
     }
+
+    // checks users agaisnt a given database and uses password middle ware to encrpy and decrypt
+    // passport is used for user management
+    // Every user has a session which is made when serializer user is ran
+    // Every user has an object which attaches to the request as req.user

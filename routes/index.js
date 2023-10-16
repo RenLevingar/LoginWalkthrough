@@ -8,8 +8,8 @@ const user = {
 
 }
 // homepage page
-router.get('/', (req,res)=>{
-    res.render('pages/index', {
+router.get('/', (req,res)=>{ // makes the base of the direction if the user/ client is only directed to the home page
+    res.render('pages/welcome', {
         user: user // example of how to pass through data
     })
 })
@@ -19,8 +19,8 @@ router.get('/', (req,res)=>{
 // })
 
 // dashboard-Homapage Redirect
-router.get('/dashboard', ensureAuthenticated,(req,res) => {
-    res.render('dashboard', {
+router.get('/dashboard', ensureAuthenticated,(req,res) => { // runs the ensure authenticated function when the user tries to go to the dashboard page
+    res.render('pages/dashboard', {
         user: req.user
     });
 })
